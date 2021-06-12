@@ -1,11 +1,10 @@
 ## Wordpress kube dev
 
 #### Prerequisites:
-1. Minikube
-2. Helm 
+> Minikube, Helm, docker, kubectl, git, wget
 
-#### Automation Script
-1. to start the cluster, please run command 
+#### Start
+1. to start the cluster, please run in your terminal
 ```shell
 ./wp.sh up
 ```
@@ -14,3 +13,12 @@
 ```shell
 ./wp.sh down
 ```
+
+#### Usage
+
+After the command from [Start](#Start) has successfully completed you may find 
+**username** and **password** in the console output.
+
+### Limitations: 
+
+- database not persisted, once you run `./wp.sh down` all changes will be lost.
