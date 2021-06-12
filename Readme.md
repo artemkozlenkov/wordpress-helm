@@ -1,5 +1,11 @@
 ## Wordpress kube dev
 
+Reusing: 
+
+_[oficial helm wordpress charts](https://github.com/helm/charts/tree/master/stable/wordpress)_
+
+_[oficial docker wordpress bitnami](https://github.com/bitnami/bitnami-docker-wordpress)_
+
 #### Prerequisites:
 > Minikube, Helm, docker, kubectl, git, wget
 
