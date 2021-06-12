@@ -5,8 +5,19 @@
 readonly WP=wp
 readonly NS=$WP
 
+
+
 #with Minikube local development environment we need to use NodePort as the ServiceType
 if [ $1 == 'up' ]; then
+
+if [[ $(minikube status -f {{.Host}}) != "Running" ]]; then
+minikube start;
+
+while [[ $(minikube status -f {{.Host}}) != "Running" ]]; do
+sleep 1;
+done;
+fi;
+
 
 helm repo add bitnami https://charts.bitnami.com/bitnami
 kubectl create namespace $NS
